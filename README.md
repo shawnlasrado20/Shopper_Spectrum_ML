@@ -11,18 +11,6 @@ This project provides:
 - Product recommendation using cosine similarity
 - A Streamlit web app to interactively get customer clusters and product recommendations
 
-## Repository Structure
-
-ShopperSpectrum/
-├── app.py # Streamlit app file (main execution)
-├── online_retail.csv # Dataset with customer transactions
-├── scaler.joblib # Saved StandardScaler model
-├── kmeans.joblib # Saved KMeans clustering model
-├── train_model.py # Model training script to generate scaler & kmeans files (optional)
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation (this file)
-
-text
 
 ## Prerequisites
 
@@ -37,41 +25,32 @@ text
 git clone https://github.com/your-username/ShopperSpectrum.git
 cd ShopperSpectrum
 
-text
-
 ### 2. Create and activate a virtual environment (optional but recommended)
 
 On macOS/Linux:
 python3 -m venv venv
 source venv/bin/activate
 
-text
 
 On Windows:
 python -m venv venv
 venv\Scripts\activate
 
-text
-
 ### 3. Install required packages
 
 pip install -r requirements.txt
 
-text
 
 *If `requirements.txt` is missing, install packages manually:*
 
 pip install streamlit pandas numpy scikit-learn joblib matplotlib seaborn
 
-text
 
 ### 4. Prepare scaler and clustering models (if pre-saved models are not provided)
 
 If you don’t have `scaler.joblib` and `kmeans.joblib`, run the training script to create them:
 
 python train_model.py
-
-text
 
 *This script preprocesses the data, trains the scaler and KMeans models, then saves them for the app to use.*
 
@@ -80,8 +59,6 @@ text
 Run the web app using:
 
 streamlit run app.py
-
-text
 
 Your default web browser will open automatically showing the interactive Shopper Spectrum app with:
 
